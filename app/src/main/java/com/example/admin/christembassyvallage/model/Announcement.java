@@ -6,9 +6,19 @@ package com.example.admin.christembassyvallage.model;
 
 public class Announcement {
     String title,Desrciption,time,startDate,endDate,place,postedDate,postedTime;
+    int color;
+
 
     public Announcement() {
     }
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
+
 
     public String getStartDate() {
         return startDate;

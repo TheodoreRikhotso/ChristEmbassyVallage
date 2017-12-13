@@ -2,7 +2,6 @@ package com.example.admin.christembassyvallage.Adapters;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,14 +47,21 @@ public class AnnouncementAdapter  extends RecyclerView.Adapter<AnnouncementAdapt
         holder.tvAnnViewTitle.setText(ann.getTitle());
         holder.tvAnnViewDesc.setText(ann.getDesrciption());
 //        holder.tvAnnViewCurrentDay.setText(ann.getPostedTime()+"\n"+ann.getPostedDate());
-//        holder.tvAnnViewDate.setText(ann.getTime()+"  "+ann.getEndDate());
 
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "fonts/Sansation-Bold.ttf");
-        holder.tvAnnViewTitle.setTypeface(custom_font);
+//
+//        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "fonts/Sansation-Bold.ttf");
+//        holder.tvAnnViewTitle.setTypeface(custom_font);
+        holder.tvAnnViewTitle.setTextColor(Color.BLACK);
 
         Random rnd = new Random();
-        int color = Color.argb(355, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        holder.backgroungView.setBackgroundColor(color);
+        String date =ann.getStartDate();
+
+
+        String[] animals = date.split(" ");
+        int animalIndex = 1;
+
+            holder.tvAnnViewDate.setText(animals[0]+"\n"+animals[1]+"\n"+animals[2]);
+
     }
 
     @Override
@@ -76,9 +82,9 @@ public class AnnouncementAdapter  extends RecyclerView.Adapter<AnnouncementAdapt
             tvAnnViewTitle= itemView.findViewById(R.id.tvAnnViewTitle);
             tvAnnViewDesc = itemView.findViewById(R.id.tvAnnViewDesc);
 //            tvAnnViewCurrentDay = itemView.findViewById(R.id.tvAnnViewCurrentDay);
-            backgroungView = itemView.findViewById(R.id.backgroungView);
+           // backgroungView = itemView.findViewById(R.id.backgroungView);
 
-//            tvAnnViewDate = itemView.findViewById(R.id.tvAnnViewDate);
+               tvAnnViewDate = itemView.findViewById(R.id.tvAnnViewDate);
 
 
 

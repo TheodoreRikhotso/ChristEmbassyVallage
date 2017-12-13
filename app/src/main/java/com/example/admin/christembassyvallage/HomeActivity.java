@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
     private FirebaseAuth mAuth;
     private Fragment fragment;
     private FragmentManager fragmentManager;
+    private    Toolbar toolbar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -58,18 +59,26 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
+                    toolbar.setTitle("Events");
                     fragment =new AllAnnoumentActivity();
                     break;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
                     fragment =new VideosActivity();
+                    toolbar.setTitle("Videos");
                     break;
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
+                    fragment =new TesimonyActivity();
+                    toolbar.setTitle("Songs");
                     break;
                 case R.id.navigation_event:
                     mTextMessage.setText(R.string.title_notifications);
+                    toolbar.setTitle("Testmonies");
+
                     fragment =new EventActivity();
+
+
                     break;
 
             }
@@ -89,8 +98,10 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         setContentView(R.layout.activity_landing);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Events");
         setSupportActionBar(toolbar);
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
