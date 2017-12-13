@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.christembassyvallage.NewEventActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:title="New event"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
+    <EditText
+android:id="@+id/tvEventTile"
+        android:hint="Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+android:id="@+id/tvEventDescription"
+        android:hint="Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+android:id="@+id/tvEventLocation"
+        android:hint="Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/tvEventTime"
+            android:layout_weight="1.00"
+            android:hint="06:00"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+
+            android:id="@+id/tvEventDate"
+            android:hint="25 Oct 2017"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <EditText
+android:id="@+id/tvEventGuest"
+        android:inputType="textImeMultiLine"
+        android:hint="Guest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+android:background="@drawable/button"
+        android:text="Submit"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/floatingActionButton"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

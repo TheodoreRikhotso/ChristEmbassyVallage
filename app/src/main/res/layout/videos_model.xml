@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <VideoView
+        android:id="@+id/vvlistPlay"
+        android:layout_marginTop="40dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="95dp">
+    <TextView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    </LinearLayout>
+
+</LinearLayout>

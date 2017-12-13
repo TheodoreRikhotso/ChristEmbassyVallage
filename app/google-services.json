@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "617465673383",
+    "firebase_url": "https://christembassyvallage.firebaseio.com",
+    "project_id": "christembassyvallage",
+    "storage_bucket": "christembassyvallage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617465673383:android:0acb6631430f706d",
+        "android_client_info": {
+          "package_name": "com.example.admin.christembassyvallage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617465673383-7bn39cgka49u9ais8ti7qs3jla8473vi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.christembassyvallage",
+            "certificate_hash": "c17803cca65d196118198f89d2700e925d77ba3e"
+          }
+        },
+        {
+          "client_id": "617465673383-q6qqird482v95alst8p64ku0l5un0315.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZWEIM7WKs9PzBm8Lq-B2-GUlL-Blr1Dw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617465673383-q6qqird482v95alst8p64ku0l5un0315.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

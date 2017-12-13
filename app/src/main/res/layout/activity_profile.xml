@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_design_support_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+           >
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="255dp"
+
+                android:background="@drawable/blur"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <FrameLayout
+                    android:background="@android:color/white"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="350dp"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center"
+                        android:elevation="100dp"
+                        android:layout_height="200dp">
+                        <ImageView
+                            android:id="@+id/ivEdit"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="310dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_mode_edit_black_24dp"/>
+
+                    </android.support.v7.widget.CardView>
+                </FrameLayout>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+
+
+                        android:elevation="15dp"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                    
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/tbProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/colorPrimary"
+                        android:minHeight="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+                </android.support.design.widget.AppBarLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="350dp"
+                android:background="@color/cardview_dark_background"
+                android:layout_gravity="center"
+                android:elevation="100dp"
+                android:layout_height="219dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textStyle="bold|italic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfileName"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_weight="0.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfileEmail"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_weight="0.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfileContacts"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_weight="0.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfileRole"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_weight="0.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfileTitle"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/ivEditOther"
+                android:layout_marginTop="450dp"
+                android:layout_marginLeft="310dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mode_edit_black_24dp"/>
+
+            <android.support.v7.widget.CardView
+                android:elevation="1dp"
+                android:layout_marginLeft="40dp"
+               android:layout_marginTop="500dp"
+                android:layout_width="149dp"
+                android:layout_height="64dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/birthday"/>
+                    <TextView
+                        android:text="Birthday"
+                       android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text=" 07 April 2017"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:elevation="1dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="580dp"
+                android:layout_width="149dp"
+                android:layout_height="84dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/quotes"/>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="Favorite quotes" />
+                </LinearLayout>
+
+                    <TextView
+                        android:inputType="textMultiLine"
+                        android:text="Romans 8:18 ( “I consider that our present sufferings are not worth comparing with the glory that will be revealed in us.”"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:elevation="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="580dp"
+                android:layout_width="149dp"
+                android:layout_height="84dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/home"/>
+                        <TextView
+                            android:text="Home Address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="1030 Lakeside Estates\n De duer Str \n 1918"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="149dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="500dp"
+                android:elevation="1dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/briefcase"/>
+                    <TextView
+                        android:text="Occupation"
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                    <TextView
+                        android:text="Geology"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>
+</android.support.v4.widget.DrawerLayout>
+
+

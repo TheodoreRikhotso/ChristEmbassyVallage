@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    tools:context="com.example.admin.christembassyvallage.LoginActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/church_logo"
+        android:id="@+id/ivLog"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/ivLog"
+        android:id="@+id/tiLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etLoginEmail"
+            android:hint="Enter your email"
+            android:maxLines="1"
+            android:inputType="textAutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/tiLoginEmail"
+        android:id="@+id/tiLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etLoginPassword"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="Login"
+        android:background="#243238"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tiLoginPassword"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_below="@+id/btnLogin"
+        android:id="@+id/loginForgotPassword"
+       android:clickable="true"
+        android:textStyle="bold"
+        android:text="Forgot Password"
+        android:textColor="@color/colorPrimaryDark"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_below="@+id/loginForgotPassword"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@android:color/darker_gray"/>
+        <TextView
+            android:padding="5dp"
+            android:layout_below="@+id/btnLogin"
+
+
+            android:text="OR"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_below="@+id/login_layout"
+        android:id="@+id/tvSign"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:text="Sign Up"
+        android:textColor="@color/colorPrimaryDark"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

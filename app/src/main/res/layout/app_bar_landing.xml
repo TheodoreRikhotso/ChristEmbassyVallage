@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.christembassyvallage.LandingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_landing" />
+    <LinearLayout
+        android:foregroundGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+        android:layout_marginBottom="22dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/post"/>
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+
+
+
+                android:layout_height="110dp">
+                <LinearLayout
+                    android:background="@android:color/black"
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:gravity="center"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:id="@+id/llEvent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        android:background="@android:color/white"
+                        android:layout_width="148dp"
+                        android:layout_height="88dp">
+                        <ImageView
+                            android:id="@+id/btnEvent"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="70dp"
+                            android:src="@drawable/event"
+
+                            android:layout_height="50dp" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:text="Events"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+
+                    android:background="@android:color/transparent"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+
+                    android:id="@+id/llAnnouncement"
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:layout_height="90dp">
+                    <LinearLayout
+
+
+                        android:orientation="vertical"
+
+                        android:gravity="center"
+                        android:background="@android:color/white"
+                        android:layout_width="148dp"
+                        android:layout_height="88dp">
+                        <ImageView
+                            android:id="@+id/btnAnnounce"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="50dp"
+                            android:src="@drawable/megaphone"
+
+                            android:layout_height="70dp" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:text="Announcement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <LinearLayout
+
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+
+                        android:gravity="center"
+                        android:background="@android:color/white"
+                        android:layout_width="148dp"
+                        android:layout_height="88dp">
+                        <ImageView
+                            android:id="@+id/btnSongs"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="50dp"
+                            android:src="@drawable/song"
+
+                            android:layout_height="70dp" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:text="Songs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+
+                    android:background="@android:color/transparent"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+
+                        android:gravity="center"
+                        android:background="@android:color/white"
+                        android:layout_width="148dp"
+                        android:layout_height="88dp">
+                        <ImageView
+                            android:id="@+id/btnVideo"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="50dp"
+                            android:src="@drawable/video"
+
+                            android:layout_height="70dp" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:text="Videos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+
+                        android:gravity="center"
+                        android:background="@android:color/white"
+                        android:layout_width="148dp"
+                        android:layout_height="88dp">
+                        <ImageView
+                            android:id="@+id/btnOnlineOffering"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="50dp"
+                            android:src="@drawable/oath"
+
+                            android:layout_height="70dp" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:text="Online Giving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+
+                    android:background="@android:color/transparent"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:background="@android:color/black"
+                    android:gravity="center"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+
+                        android:gravity="center"
+                        android:background="@android:color/white"
+                        android:layout_width="148dp"
+                        android:layout_height="88dp">
+                        <ImageView
+                            android:id="@+id/btnTestimonites"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="50dp"
+                            android:src="@drawable/chat"
+
+                            android:layout_height="70dp" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:text="Testimonies"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+</RelativeLayout>
