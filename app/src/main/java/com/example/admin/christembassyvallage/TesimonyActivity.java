@@ -1,6 +1,9 @@
 package com.example.admin.christembassyvallage;
 
 import android.app.Dialog;
+import android.icu.text.DateFormat;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -24,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TesimonyActivity extends Fragment {
@@ -119,16 +123,27 @@ public class TesimonyActivity extends Fragment {
                         if (dataSnapshot != null) {
                             Person person = dataSnapshot.getValue(Person.class);
                             if (person != null) {
+                                Calendar cal = Calendar.getInstance();
+                                final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MM yyyy");
+
+                                final Date currentTimes = Calendar.getInstance().getTime();
+
+                                DateFormat date = new SimpleDateFormat("HH:mm a");
+
+
 
                                 String test = etTestmony.getText().toString();
                                 Testimony testimony = new Testimony();
 
+                                testimony.setDate(dateFormat.format(cal.getTime()));
+                                testimony.setTime(date.format(currentTimes));
                                 testimony.setDescripion(test);
                                 testimony.setName(person.getName() + " " + person.getSurname());
                                 testimony.setUrlImage(person.getImageUrl());
 
                                 String id = dbTestimony.push().getKey();
                                 dbTestimony.child(id).setValue(testimony);
+
 
 
                                 builder.dismiss();

@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="255dp"
 
-                android:background="@drawable/blur"
+                android:background="#393E46"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
                 <android.support.design.widget.CollapsingToolbarLayout

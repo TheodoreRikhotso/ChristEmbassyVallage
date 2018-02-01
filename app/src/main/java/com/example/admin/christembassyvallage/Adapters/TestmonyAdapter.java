@@ -5,12 +5,14 @@ import android.graphics.Bitmap;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
@@ -31,7 +33,9 @@ public class TestmonyAdapter extends RecyclerView.Adapter<TestmonyAdapter.MyView
         private Activity context;
         private List<Testimony> userItemPojos;
         private Activity applicationContext;
-        private boolean check =false;
+        private boolean like=false;
+        private boolean checks =false;
+
 
         public TestmonyAdapter(Activity context, List<Testimony> userItemPojos) {
             this.context = context;
@@ -45,6 +49,7 @@ public class TestmonyAdapter extends RecyclerView.Adapter<TestmonyAdapter.MyView
 
             MyViewHolder myViewHolder = new MyViewHolder(view);
             return myViewHolder;
+
         }
 
         @Override
@@ -61,6 +66,53 @@ public class TestmonyAdapter extends RecyclerView.Adapter<TestmonyAdapter.MyView
                             RoundedBitmapDrawableFactory.create(context.getResources(), resource);
                     circularBitmapDrawable.setCircular(true);
                     holder.circleImageView.setImageDrawable(circularBitmapDrawable);
+                }
+            });
+
+            holder.tvTestTime.setText(ann.getDate());
+            holder.ivLike.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if(like==false) {
+                        like=true;
+                        holder.ivLike.setImageResource(R.drawable.likes);
+                    } else if (like==true) {
+                        like=false;
+                        holder.ivLike.setImageResource(R.drawable.like);
+                    }
+                }
+            });
+
+//if( holder.tvAnnViewDesc.getLineCount()<=3)
+//{
+//    holder.ivReadMore.setVisibility(View.GONE);
+//}
+            holder.ivReadMore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+//                    Testimony   testimony = ann;
+  Toast.makeText(context, "out", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(context, ReadMoreActivity.class);
+//
+//                    intent.putExtra("select", testimony);
+//                    Toast.makeText(context, testimony.getName(), Toast.LENGTH_SHORT).show();
+//                    context.startActivity(intent);
+
+                    holder.tvAnnViewDesc.setMaxLines(10000);
+                    holder.tvAnnViewDesc.setEllipsize(TextUtils.TruncateAt.MIDDLE);
+            if(checks ==true) {
+                checks = false;
+                holder.tvAnnViewDesc.setMaxLines(10000);
+                holder.tvAnnViewDesc.setEllipsize(TextUtils.TruncateAt.MIDDLE);
+
+            }else if(checks ==false) {
+                checks = true;
+                holder.tvAnnViewDesc.setMaxLines(3);
+                holder.tvAnnViewDesc.setEllipsize(TextUtils.TruncateAt.END);
+
+
+            }
                 }
             });
 
@@ -87,10 +139,11 @@ public class TestmonyAdapter extends RecyclerView.Adapter<TestmonyAdapter.MyView
         }
 
         public class MyViewHolder extends RecyclerView.ViewHolder {
-            TextView tvAnnViewTitle,tvAnnViewDesc,tvAnnViewCurrentDay,tvAnnViewDate;
+            TextView tvAnnViewTitle,tvAnnViewDesc,tvAnnViewCurrentDay,tvAnnViewDate,tvTestTime;
             LinearLayout llUserItem;
             ImageView ivStatusColor;
             CircleImageView circleImageView;
+            ImageView ivLike,ivReadMore;
 
 
 
@@ -99,8 +152,10 @@ public class TestmonyAdapter extends RecyclerView.Adapter<TestmonyAdapter.MyView
                 tvAnnViewTitle= itemView.findViewById(R.id.tvTestmonyName);
                 tvAnnViewDesc = itemView.findViewById(R.id.tvDescrption);
                 circleImageView = itemView.findViewById(R.id.circleImageView);
+                ivLike= itemView.findViewById(R.id.ivLike);
+                ivReadMore = itemView.findViewById(R.id.ivReadMore);
 
-//            tvAnnViewCurrentDay = itemView.findViewById(R.id.tvAnnViewCurrentDay);
+          tvTestTime = itemView.findViewById(R.id.tvTestTime);
 //                backgroungView = itemView.findViewById(R.id.backgroungView);
 
 //            tvAnnViewDate = itemView.findViewById(R.id.tvAnnViewDate);

@@ -1,14 +1,32 @@
 package com.example.admin.christembassyvallage.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Admin on 13-Dec-17.
  */
 
-public class Testimony {
-    String descripion,name,urlImage;
+public class Testimony implements Serializable {
+    String descripion,name,urlImage,date, time;
     int like;
 
     public Testimony() {
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getDescripion() {

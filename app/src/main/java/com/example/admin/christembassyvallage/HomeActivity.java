@@ -70,7 +70,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     fragment =new TesimonyActivity();
-                    toolbar.setTitle("Songs");
+                    toolbar.setTitle("Testmonies");
                     break;
                 case R.id.navigation_event:
                     mTextMessage.setText(R.string.title_notifications);
@@ -229,17 +229,25 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
+        }  else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_location) {
+            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

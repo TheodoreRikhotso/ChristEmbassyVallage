@@ -36,15 +36,16 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class LandingActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-     private TextView tvName,tvEmail;
-    public static   String name,surname,contact,imageUrl;
+    private TextView tvName, tvEmail;
+    public static String name, surname, contact, imageUrl;
     private CircleImageView civProfileImage;
 
     //views
-    private LinearLayout llEvent,llAnnouncement;
+    private LinearLayout llEvent, llAnnouncement;
 
     //firebase
     private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +54,13 @@ public class LandingActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 //call view
-        llEvent= (LinearLayout)findViewById(R.id.llEvent);
-        llAnnouncement= (LinearLayout)findViewById(R.id.llAnnouncement);
+        llEvent = (LinearLayout) findViewById(R.id.llEvent);
+        llAnnouncement = (LinearLayout) findViewById(R.id.llAnnouncement);
 
         llEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LandingActivity.this,EventActivity.class);
+                Intent intent = new Intent(LandingActivity.this, EventActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +68,7 @@ public class LandingActivity extends AppCompatActivity
         llAnnouncement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LandingActivity.this,AnnouncementActivity.class);
+                Intent intent = new Intent(LandingActivity.this, AnnouncementActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,10 +84,10 @@ public class LandingActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View v = navigationView.getHeaderView(0);
-         tvName = (TextView ) v.findViewById(R.id.tvName);
-        tvEmail = (TextView ) v.findViewById(R.id.tvEmail);
+        tvName = (TextView) v.findViewById(R.id.tvName);
+        tvEmail = (TextView) v.findViewById(R.id.tvEmail);
         tvEmail.setText(mAuth.getCurrentUser().getEmail());
-        civProfileImage =v.findViewById(R.id.civProfileImage);
+        civProfileImage = v.findViewById(R.id.civProfileImage);
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -94,7 +95,7 @@ public class LandingActivity extends AppCompatActivity
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        DatabaseReference db_Child= db.child(user.getUid());
+        DatabaseReference db_Child = db.child(user.getUid());
 
         db_Child.addValueEventListener(new ValueEventListener() {
             @Override
@@ -109,7 +110,7 @@ public class LandingActivity extends AppCompatActivity
                         surname = person.getSurname();
                         contact = person.getContacts();
 
-                        tvName.setText(name+" "+surname);
+                        tvName.setText(name + " " + surname);
 
 
 //
@@ -130,7 +131,7 @@ public class LandingActivity extends AppCompatActivity
                 civProfileImage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -139,7 +140,7 @@ public class LandingActivity extends AppCompatActivity
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(LandingActivity.this, "+"+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LandingActivity.this, "+" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -187,14 +188,21 @@ public class LandingActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
+        }  else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_location) {
+            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
 
         }
@@ -205,8 +213,7 @@ public class LandingActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onKeyDown(final int keyCode, KeyEvent event)
-    {
+    public boolean onKeyDown(final int keyCode, KeyEvent event) {
         AlertDialog alertDialog = new AlertDialog.Builder(LandingActivity.this).create();
         alertDialog.setTitle("Alert");
         alertDialog.setMessage("Do you wanna logout");
@@ -214,8 +221,7 @@ public class LandingActivity extends AppCompatActivity
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseAuth.getInstance().signOut();
-                        if ((keyCode == KeyEvent.KEYCODE_BACK))
-                        {
+                        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 
 
                             finish();
@@ -227,8 +233,7 @@ public class LandingActivity extends AppCompatActivity
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
-                        if ((keyCode == KeyEvent.KEYCODE_BACK))
-                        {
+                        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 
 
                             finish();

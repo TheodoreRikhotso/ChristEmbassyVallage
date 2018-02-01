@@ -7,8 +7,17 @@ package com.example.admin.christembassyvallage.model;
 public class Person {
     private String id, name, surname,contacts,email,password,imageUrl,role,title,dob, quotes,address, occupation;
     private int rolePosition,titlePosition;
+    private boolean like;
 
     public Person() {
+    }
+
+    public boolean isLike() {
+        return like;
+    }
+
+    public void setLike(boolean like) {
+        this.like = like;
     }
 
     public String getId() {

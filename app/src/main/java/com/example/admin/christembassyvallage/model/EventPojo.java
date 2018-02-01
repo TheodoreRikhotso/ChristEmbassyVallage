@@ -10,6 +10,9 @@ public class EventPojo  implements Serializable {
 
         private String id, title,description,startDate, enddate, location,time,guest;
     private int duration;
+    private String day;
+    private int imageResource;
+    private String note;
 
         public EventPojo() {
         }
@@ -85,6 +88,30 @@ public class EventPojo  implements Serializable {
         public void setGuest(String guest) {
             this.guest = guest;
         }
+
+    public String getDay() {
+        return day;
     }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public int getImageResource() {
+        return imageResource;
+    }
+
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+}
 
 
