@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.admin.christembassyvallage"
         minSdkVersion 18
@@ -41,8 +41,10 @@ dependencies {
     compile 'com.github.sundeepk:compact-calendar-view:2.0.2.2'
     compile 'com.android.support:support-vector-drawable:26.+'
     compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.daasuu:EasingInterpolator:1.0.0'
     testCompile 'junit:junit:4.12'
 }
+
 
 
 

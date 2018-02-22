@@ -5,36 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/activity_sign"
+    android:background="@drawable/last_background"
     tools:context="com.example.admin.christembassyvallage.SignUpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
+        android:layout_marginTop="23dp"
         android:id="@+id/tbSignUp"
         android:layout_width="match_parent"
-        android:background="#1770FE"
+        android:background="@color/colorPrimary"
         android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/tbSignUp"
+    <!--<ImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_below="@+id/tbSignUp"-->
 
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/church_logo"
-        android:id="@+id/ivLog"
-        />
+        <!--android:layout_centerHorizontal="true"-->
+
+        <!--android:id="@+id/ivLog"-->
+        <!--/>-->
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/ettName"
         android:layout_width="match_parent"
 
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ivLog"
+        android:layout_height="55dp"
+        android:layout_below="@+id/tbSignUp"
         android:layout_alignParentStart="true">
+
         <EditText
+            android:layout_margin="8dp"
+            android:padding="4dp"
             android:id="@+id/etName"
-            android:hint="Name"
-            android:inputType="text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:hint="Name"
+            android:inputType="text" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -46,11 +58,14 @@
         android:layout_below="@+id/ettName"
         android:layout_alignParentStart="true">
         <EditText
+            android:layout_margin="8dp"
             android:id="@+id/etSurname"
             android:hint="Surname"
+            android:background="@drawable/border"
             android:inputType="text"
+            android:padding="4dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -62,11 +77,14 @@
         android:layout_below="@+id/ettSurname"
         android:layout_alignParentStart="true">
         <EditText
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:padding="4dp"
             android:id="@+id/etContact"
             android:hint="Contact"
             android:inputType="text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"/>
 
 
     </android.support.design.widget.TextInputLayout>
@@ -78,48 +96,62 @@
 
         <EditText
             android:id="@+id/etSignEmail"
+            android:background="@drawable/border"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/spTitle"
+            android:layout_centerVertical="true"
             android:hint="Email"
             android:inputType="textAutoComplete"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:layout_margin="8dp"
+            android:padding="4dp" />
 
 
     </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/tireenter"
-        android:layout_width="match_parent"
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:id="@+id/tireenter"-->
+        <!--android:layout_width="match_parent"-->
 
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spTitle"
-        android:layout_alignParentStart="true">
-        <EditText
-            android:id="@+id/etRenterPass"
-            android:hint="Re-enter password"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/spTitle"-->
+        <!--android:layout_alignParentStart="true">-->
+        <!--<EditText-->
+<!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:background="@drawable/border"-->
+            <!--android:id="@+id/etRenterPass"-->
+            <!--android:hint="Re-enter password"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp" />-->
 
 
-    </android.support.design.widget.TextInputLayout>
+    <!--</android.support.design.widget.TextInputLayout>-->
     <Spinner
+        android:background="@drawable/border"
         android:layout_below="@+id/tiSignEmail"
         android:id="@+id/spTitle"
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
+        android:layout_height="40dp"></Spinner>
     <android.support.design.widget.TextInputLayout
         android:id="@+id/tiSignPassword"
         android:layout_width="match_parent"
         app:passwordToggleEnabled="true"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tireenter"
+        android:layout_below="@+id/spTitle"
         android:layout_alignParentStart="true">
         <EditText
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:background="@drawable/border"
+            android:layout_height="40dp"
             android:id="@+id/etSignPassword"
-            android:hint="Enter your password"
+
             android:inputType="textPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -127,11 +159,14 @@
         android:id="@+id/btnSign"
         android:layout_below="@id/tiSignPassword"
         android:text="Sign Up"
-        android:background="#243238"
-        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@drawable/button_"
+        android:textSize="13dp"
+        android:padding="8dp"
+        android:layout_margin="50dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
-
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

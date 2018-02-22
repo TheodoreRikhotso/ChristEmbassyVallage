@@ -17,7 +17,6 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICE" />
 
     <application
-
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,31 +24,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUpActivity"/>
+
         <activity android:name=".AccountActivity" />
         <activity android:name=".DashBoardActivity" />
         <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".SignUpActivity" />
+      //
         <activity
             android:name=".LandingActivity"
             android:label="@string/title_activity_landing"
             android:theme="@style/AppTheme" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".EventActivity" />
+
         <activity android:name=".NewEventActivity" />
         <activity android:name=".AnnouncementActivity" />
-        <activity android:name=".AllAnnoumentActivity" />
+
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name=".VideosActivity" />
-        <activity android:name=".TesimonyActivity" />
+
+
         <activity android:name=".LocationActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -67,9 +72,11 @@
             android:name=".ChurchLocationActivity"
             android:label="@string/title_activity_church_location" />
         <activity android:name=".ReadMoreActivity" />
+
         <activity android:name=".SignUpForBaptismActivity" />
         <activity android:name=".AddNoteActivity" />
-        <activity android:name=".NotePreviewActivity"></activity>
+        <activity android:name=".NotePreviewActivity" />
+
     </application>
 
 </manifest>

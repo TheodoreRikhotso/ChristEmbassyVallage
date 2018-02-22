@@ -3,21 +3,23 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_announcement_black_24dp"
-        android:title="Announcement" />
+        android:icon="@drawable/ic_event_black_24dp"
+
+        android:title="Events" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_ondemand_video_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:icon="@drawable/ic_announcement_black_24dp"
+
+        android:title="Testmonies" />
 
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ic_audiotrack_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="Songs" />
     <item
         android:id="@+id/navigation_event"
-        android:icon="@drawable/ic_event_black_24dp"
+        android:icon="@drawable/ic_ondemand_video_black_24dp"
         android:title="Announcement" />
 
 </menu>

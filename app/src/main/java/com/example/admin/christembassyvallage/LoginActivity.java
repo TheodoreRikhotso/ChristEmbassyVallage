@@ -1,5 +1,6 @@
 package com.example.admin.christembassyvallage;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private RelativeLayout activity_main;
 
     private FirebaseAuth mAuth;
+    private ProgressDialog mProgress;
 
 
     @Override
@@ -43,6 +45,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginForgotPassword.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
+
+        mProgress = new ProgressDialog(this);
+        mProgress.setTitle("Processing...");
+        mProgress.setMessage("Please wait...");
+        mProgress.setCancelable(false);
+        mProgress.setIndeterminate(true);
 
 
         ///cheeck Firebase
@@ -97,18 +105,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
+                            mProgress.show();
                             if(password.length()<6)
                             {
                                 Snackbar snackbar = Snackbar.make(activity_main,"Password Length must be o very 6",Snackbar.LENGTH_LONG);
                                 snackbar.show();
+                               // mProgress.dismiss();
                             }
+
                             Snackbar snackbar = Snackbar.make(activity_main,"Success ",Snackbar.LENGTH_LONG);
                             snackbar.show();
-                            startActivity(new Intent(LoginActivity.this,LandingActivity.class));
+                            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                             finish();
+                            mProgress.dismiss();
                         }else {
-                            Snackbar snackbar = Snackbar.make(activity_main,"Incorrect Login "+task.getException(),Snackbar.LENGTH_LONG);
+                            Snackbar snackbar = Snackbar.make(activity_main,"Incorrect Login "+task.getException().getMessage(),Snackbar.LENGTH_LONG);
                             snackbar.show();
+                            //mProgress.dismiss();
                         }
                     }
                 });

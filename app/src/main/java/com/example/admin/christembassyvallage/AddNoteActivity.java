@@ -119,6 +119,7 @@ public class AddNoteActivity extends AppCompatActivity {
                 eventPojo.setId(id);
                 eventPojo.setEnddate(enddate);
                 eventPojo.setImageResource(R.drawable.briefcase);
+                eventPojo.setTime(selectedTime);
 
                 eventPojo.setNote(noteEditText.getText().toString());
 
@@ -192,7 +193,7 @@ enddate=date;
                     cal.set(Calendar.HOUR, hourOfDay);
                     cal.set(Calendar.MINUTE, minute);
                     Date currentTime = cal.getTime();
-                    DateFormat dateFormat = new SimpleDateFormat("hh:mm");
+                    DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
                     //DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
 
 String time =dateFormat.format(currentTime).toString();

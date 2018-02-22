@@ -1,12 +1,10 @@
 package com.example.admin.christembassyvallage.model;
 
-import java.io.Serializable;
-
 /**
  * Created by Admin on 06-Nov-17.
  */
 
-public class EventPojo  implements Serializable {
+public class EventPojo   {
 
         private String id, title,description,startDate, enddate, location,time,guest;
     private int duration;
@@ -17,7 +15,8 @@ public class EventPojo  implements Serializable {
         public EventPojo() {
         }
 
-        public String getId() {
+
+    public String getId() {
             return id;
         }
 

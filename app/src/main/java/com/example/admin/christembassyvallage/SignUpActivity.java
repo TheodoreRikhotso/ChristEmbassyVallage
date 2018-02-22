@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
         etSignEmail =(EditText)findViewById(R.id.etSignEmail);
         etName =(EditText)findViewById(R.id.etName);
         etContact =(EditText)findViewById(R.id.etContact);
-        etRenterPass =(EditText) findViewById(R.id.etRenterPass);
+
         etSurname =(EditText) findViewById(R.id.etSurname);
 
 

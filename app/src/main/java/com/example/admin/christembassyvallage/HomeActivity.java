@@ -63,14 +63,15 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
                     fragment =new AllAnnoumentActivity();
                     break;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    fragment =new VideosActivity();
-                    toolbar.setTitle("Videos");
-                    break;
-                case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     fragment =new TesimonyActivity();
                     toolbar.setTitle("Testmonies");
+
+                    break;
+                case R.id.navigation_notifications:
+                    mTextMessage.setText(R.string.title_dashboard);
+                    fragment =new VideosActivity();
+                    toolbar.setTitle("Videos");
                     break;
                 case R.id.navigation_event:
                     mTextMessage.setText(R.string.title_notifications);
@@ -231,7 +232,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
             // Handle the camera action
             Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
         }  else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(this, ChurchLocationActivity.class);
+            Intent intent = new Intent(this, SignUpForBaptismActivity.class);
             startActivity(intent);
             Toast.makeText(this, "t", Toast.LENGTH_SHORT).show();
 
